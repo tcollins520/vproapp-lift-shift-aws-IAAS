@@ -1,3 +1,4 @@
+# deployment script for tomcat server on ubuntu
 #!/bin/bash
 sudo apt update
 sudo apt upgrade -y
