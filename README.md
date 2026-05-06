@@ -24,106 +24,101 @@ Prepare the application for future modernization
 AWS Services Used
 
 
-Amazon EC2
+* Amazon EC2
 
 
-Application Load Balancer (ALB)
+* Application Load Balancer (ALB)
 
 
-Auto Scaling Groups
+* Auto Scaling Groups
 
 
-Route53
+* Route53
 
 
-AWS Certificate Manager (ACM)
+* AWS Certificate Manager (ACM)
 
 
-Amazon S3
+* Amazon S3
 
 
-Security Groups
+* Security Groups
 
 
-IAM Roles & Policies
+* IAM Roles & Policies
 
 
 🏗️ Infrastructure Components
+
 🌐 Frontend Layer
 
-
-Route53 manages DNS
-
-
-HTTPS enabled via ACM
+* Route53 manages DNS
 
 
-ALB distributes traffic across application servers
+* HTTPS enabled via ACM
 
+
+* ALB distributes traffic across application servers
 
 
 ⚙️ Application Layer
 
-
-Apache Tomcat deployed on EC2
-
-
-Auto Scaling Group manages scaling
+* Apache Tomcat deployed on EC2
 
 
-Security Groups restrict access to port 8080
+* Auto Scaling Group manages scaling
 
+
+* Security Groups restrict access to port 8080
 
 
 🗄️ Backend Layer
 Separate EC2 instances host:
 
-
-MySQL Database
-
-
-RabbitMQ Message Broker
+* MySQL Database
 
 
-Memcached Cache Server
+* RabbitMQ Message Broker
 
 
-Private Route53 DNS is used for internal communication between services.
+* Memcached Cache Server
+
+
+* Private Route53 DNS is used for internal communication between services.
 
 🔁 Deployment Flow
 
-
-Create AWS infrastructure
-
-
-Configure Security Groups
+* Create AWS infrastructure
 
 
-Launch backend EC2 instances
+* Configure Security Groups
 
 
-Launch Tomcat application servers
+* Launch backend EC2 instances
 
 
-Build application using Maven
+* Launch Tomcat application servers
 
 
-Upload artifact to S3
+* Build application using Maven
 
 
-Deploy WAR file to Tomcat
+* Upload artifact to S3
 
 
-Configure Load Balancer
+* Deploy WAR file to Tomcat
 
 
-Enable HTTPS using ACM
+* Configure Load Balancer
+
+
+* Enable HTTPS using ACM
 
 
 Configure Route53 DNS
 
 
-Validate deployment
+* Validate deployment
 
 
 
@@ -148,39 +143,9 @@ Maven
 Git
 
 
-Basic AWS networking knowledge
-
-
-
-🚀 How to Run
-1. Clone Repository
-git clone https://github.com/tcollins520/vproapp-lift-shift-aws-IAAS.gitcd vproapp-lift-shift-aws-IAAS
-
-2. Build Application
-mvn clean install
-
-3. Deploy Infrastructure
-
-
-Launch backend EC2 instances
-
-
-Configure Tomcat servers
-
-
-Setup Load Balancer
-
-
-Configure Route53
-
-
-Deploy WAR artifact
-
-
-
 🌐 Access the Application
 After deployment:
-http://<your-load-balancer-dns>
+http://https://vprofileapp.tcapp.xyz/
 
 🔐 Security Architecture
 
