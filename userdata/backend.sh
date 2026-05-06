@@ -1,3 +1,4 @@
+bacsh script to set up the backend environment, including MySQL, Memcached, and RabbitMQ. It also restores a database dump for the application.
 #!/bin/bash
 DATABASE_PASS='admin123'
 
