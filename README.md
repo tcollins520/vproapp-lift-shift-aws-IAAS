@@ -285,6 +285,3 @@ Infrastructure deployment skills
 
 Real-world DevOps workflows
 
-
-Perfect for Cloud Engineer / DevOps Engineer portfolios 🚀
-::contentReference[oaicite:2]{index=2}
